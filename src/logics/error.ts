@@ -43,7 +43,7 @@ export const handleError = (err: HandledError, res: Response | null = null): Res
 	// Unhandled Error
 	if(!HandledErrorSchema.safeParse(err).success){
 		console.log(err);
-		console.log("↑ このエラー、ちゃんとハンドリングしてよね！");
+		console.log("\x1b[31m↑ このエラー、ちゃんとハンドリングしてね！\x1b");
 		if(res)
 			return res.status(500).json({ code: 500, message: "サーバー内部障害" });
 		return;
