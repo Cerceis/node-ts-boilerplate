@@ -1,0 +1,32 @@
+openapi: 3
+info:
+  title: Test API
+  version: 1.0.0
+  description: |
+    API のtemplate
+
+paths:
+  /testError:
+    get:
+      summary: Test endpoint
+      description: Returns `true` if the endpoint is implemented, otherwise throws a server error.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: APIResponse<boolean>
+                example:
+        '501':
+          description: Not Implemented error
+          content:
+            application/json:
+              schema:
+                type: object
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
