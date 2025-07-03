@@ -1,4 +1,4 @@
-# Project Peach sorbet
+# Node Boilerplate
 
 ## ガイドライン
 
@@ -44,6 +44,8 @@ serverError() と handleError()を使ってください。
 ---
 
 ### 4. API Response
+handleResponse()を使ってください。  
+詳細は@/router/apiLogics/_template.ts
 
 
 
